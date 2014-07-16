@@ -19,7 +19,6 @@ private:
 
 	std::vector<std::vector<int> > tiledMap;
 	sf::Vector2i tileSize;
-	sf::Vector2i tileCount;
-	
+	sf::Vector2i tileCount;	
 };
 

@@ -6,7 +6,6 @@
 player::player(void)
 {
 	position=sf::Vector2i(100, 100);
-
 }
 
 player::~player(void)

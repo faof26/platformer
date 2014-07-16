@@ -13,7 +13,7 @@ public:
     void MoveRight();
     void MoveLeft();
 
-	void draw();
+	void draw();	
 
     sf::Sprite GetSprite();
 

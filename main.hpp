@@ -36,19 +36,13 @@ public:
 	}	
 
 	// accessors
-	sf::RenderWindow* GetWindow()
-	{
-		return Window;
-	}
+	sf::RenderWindow* GetWindow(){return Window;}
 
 	// update and display
 	void Update();
 	void Display();	
 
-	void Init();
-
-public:
-	;
+	void Init();	
 
 private:	
 

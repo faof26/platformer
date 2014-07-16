@@ -1,8 +1,12 @@
+/*
+TODO: -controle du joueur (deplacement "fluide", saut)
+-creation de la carte
+-collision
+
+*/
 #include <sstream>
 #include "main.hpp"
-
 #include "world.h"
-
 #include <iostream>
 
 // Initialization of the smart pointer
@@ -42,11 +46,8 @@ void Application::Display()
 	Window->clear();
 	Window->getViewport(Window->getView());	
 	
-
 	_world->draw();	
-	_player->draw();
-	//...
-
+	_player->draw();	
 
 	Window->display();
 }
