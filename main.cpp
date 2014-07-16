@@ -1,5 +1,6 @@
 #include <sstream>
 #include "main.hpp"
+
 #include "world.h"
 
 #include <iostream>
@@ -31,6 +32,7 @@ void Application::Update()
             // la touche "flèche gauche" est enfoncée : on bouge le personnage
             _player->MoveLeft();
         }
+
     }
 	
 }
@@ -40,8 +42,11 @@ void Application::Display()
 	Window->clear();
 	Window->getViewport(Window->getView());	
 	
+
 	_world->draw();	
 	_player->draw();
+	//...
+
 
 	Window->display();
 }
