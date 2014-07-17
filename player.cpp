@@ -5,7 +5,8 @@
 
 player::player(void)
 {
-	position=sf::Vector2i(100, 100);
+	position=sf::Vector2f(100, 100);
+	vitesse=sf::Vector2f(0, 0);
 }
 
 player::~player(void)
@@ -13,7 +14,8 @@ player::~player(void)
 }
 
 player::player(sf::RenderWindow *p){
-	position=sf::Vector2i(100, 100);
+	position=sf::Vector2f(100, 100);
+	vitesse=sf::Vector2f(0, 0);
 	pWindow=p;
 }
 
@@ -42,14 +44,14 @@ sf::Sprite player::GetSprite()
 
 void player::MoveRight(){
 
-	position.x+=10;
+	position.x+=1;
     mySprite.move(2, 0);
 
 }
 
 void player::MoveLeft(){
 
-	position.x-=10;
+	position.x-=1;
     mySprite.move(-2, 0);
 
 }

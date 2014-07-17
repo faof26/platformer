@@ -19,7 +19,8 @@ public:
 
 private:
 	sf::RenderWindow *pWindow;
-	sf::Vector2i position;
+	sf::Vector2f position;
+	sf::Vector2f vitesse;
 
 	sf::Image myImage;
     sf::Texture myTexture;

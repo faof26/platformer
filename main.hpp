@@ -3,7 +3,7 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/Window.hpp>
 
-
+#include "game.h"
 #include "world.h"
 #include "player.h"
 
@@ -50,6 +50,9 @@ private:
 	sf::RenderWindow* Window;
 	static Application* pSingleton;
 
+	bool keyRightPressed;
+
+	game *_game;
 	world *_world;
 	player *_player;
 	

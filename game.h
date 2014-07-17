@@ -10,6 +10,8 @@ public:
 	game(player *_p, world *_w);
 	~game(void);
 
+	void update();
+
 	player *pPlayer;
 	world *pWorld;
 };

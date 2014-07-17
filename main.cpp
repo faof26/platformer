@@ -1,21 +1,18 @@
-/*
-TODO: -controle du joueur (deplacement "fluide", saut)
+/*TODO: -controle du joueur (deplacement "fluide", saut)
 -creation de la carte
 -collision
-
 */
 #include <sstream>
 #include "main.hpp"
 #include "world.h"
 #include <iostream>
-
 // Initialization of the smart pointer
 Application* Application::pSingleton = NULL;
 
 void Application::Update()
 {	
-
 	// Events managing
+
     sf::Event Event;
     while (Window->pollEvent(Event))
     {					
@@ -26,18 +23,30 @@ void Application::Update()
 			return;
 		}
 
-		 if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
         {
             // la touche "flèche gauche" est enfoncée : on bouge le personnage
-            _player->MoveRight();
-        }
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
+            //_player->MoveRight();
+			;
+		}
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
         {
             // la touche "flèche gauche" est enfoncée : on bouge le personnage
             _player->MoveLeft();
-        }
+        }	
 
+
+		if((Event.type == sf::Event::KeyPressed)&&(Event.key.code == sf::Keyboard::Right)){
+			keyRightPressed=true;
+		}
+		if((Event.type == sf::Event::KeyReleased)&&(Event.key.code == sf::Keyboard::Right)){
+			keyRightPressed=false;
+		}
+         	
+
+		 
     }
+	if(keyRightPressed){_player->MoveRight();}
 	
 }
 
@@ -54,7 +63,10 @@ void Application::Display()
 
 void Application::Init(){
 	_world = new world(Window);
+	_world->initMap();
 	_player = new player(Window);	
+	_game = new game(_player, _world);
+	keyRightPressed=false;
 }
 
 int main()
