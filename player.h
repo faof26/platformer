@@ -8,7 +8,7 @@ public:
 	player(void);
 	~player(void);
 	player(sf::RenderWindow *);
-	player(const std::string & filePath, sf::IntRect subRect, sf::Vector2f position, int width, int height);	
+	player(const std::string & filePath, sf::IntRect subRect, sf::Vector2f position, int width, int height);	 
 
     void MoveRight();
     void MoveLeft();
@@ -20,7 +20,7 @@ public:
 private:
 	sf::RenderWindow *pWindow;
 	sf::Vector2f position;
-	sf::Vector2f vitesse;
+	sf::Vector2f vitesse;//x,y
 
 	sf::Image myImage;
     sf::Texture myTexture;
