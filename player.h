@@ -9,6 +9,7 @@ public:
 	~player(void);
 	player(sf::RenderWindow *);
 	player(const std::string & filePath, sf::IntRect subRect, sf::Vector2f position, int width, int height);	 
+	// player(const std::string & filePath, sf::IntRect subRect, sf::Vector2f position, int width, int height,sf::RenderWindow *);
 
     void MoveRight();
     void MoveLeft();
