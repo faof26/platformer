@@ -29,4 +29,5 @@ private:
 
     int myWidth; // Largeur
     int myHeight; // Hauteu
+    //bool isInAir;
 };
