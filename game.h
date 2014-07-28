@@ -14,5 +14,6 @@ public:
 
 	player *pPlayer;
 	world *pWorld;
+	//bool colision();
 };
 
