@@ -68,7 +68,11 @@ void player::MoveRight(){
 
 	position.x+=1;
     mySprite.move(2, 0);
-
+  /*  	if(vitesse.x<2)
+		vitesse.x++;
+	else
+		vitesse.x=2;
+*/
 }
 
 void player::MoveLeft(){
@@ -84,3 +88,10 @@ void player::draw(){
 	circle.setPosition(sf::Vector2f(position.x+2.5, position.y+2.5));
 	pWindow->draw(circle);
 }
+/*
+void jump(){
+	
+	if(isInAir==false)
+		vitesse.y=10;
+}*/
+
