@@ -15,7 +15,7 @@ public:
     void MoveLeft();
 
 	void draw();	
-
+	// void jump();
     sf::Sprite GetSprite();
 
 private:
