@@ -73,3 +73,27 @@ void world::draw(){
 		}
 	}
 }
+/* fonction qui verifie si le tile ca generer une colision
+bool tileIsDure(int i, int j){
+	if (tiledMap[i][j]==1)
+		return true;
+	else
+		return false;
+}
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
