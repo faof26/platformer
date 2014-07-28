@@ -22,11 +22,11 @@ player::player(sf::RenderWindow *p){
 player::player(const std::string &filePath, sf::IntRect subRect, sf::Vector2f position, int width, int height)
 : myWidth(width), myHeight(height)
 {
-    if (!myImage.loadFromFile(filePath)) // Si le chargement a échoué
+    if (!myImage.loadFromFile(filePath)) // Si le chargement a ï¿½chouï¿½
     {
         std::cerr<<"Error during import "<<filePath<<std::endl;
     }
-    else // Si le chargement de l'image a réussi
+    else // Si le chargement de l'image a rï¿½ussi
     {
         myImage.createMaskFromColor(sf::Color::White); // Masque de couleur
         myTexture.loadFromImage(myImage);
@@ -35,6 +35,28 @@ player::player(const std::string &filePath, sf::IntRect subRect, sf::Vector2f po
         mySprite.setPosition(position);
     }
 }
+/*
+player::player(const std::string &filePath, sf::IntRect subRect, sf::Vector2f position, int width, int height,sf::RenderWindow *p)
+: myWidth(width), myHeight(height)
+{
+    if (!myImage.loadFromFile(filePath)) // Si le chargement a ï¿½chouï¿½
+    {
+        std::cerr<<"Error during import "<<filePath<<std::endl;
+    }
+    else // Si le chargement de l'image a rï¿½ussi
+    {
+        myImage.createMaskFromColor(sf::Color::White); // Masque de couleur
+        myTexture.loadFromImage(myImage);
+        mySprite.setTexture(myTexture);
+        mySprite.setTextureRect(subRect); // Sous rectangle
+        mySprite.setPosition(position);
+    }
+    vitesse=sf::Vector2f(0, 0);
+    pWindow=p;
+}
+*/
+
+
 
 sf::Sprite player::GetSprite()
 {
