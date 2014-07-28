@@ -2,6 +2,7 @@
 
 #include <vector>
 #include <SFML\Graphics.hpp>
+// #include <bool.hpp>
 
 class world
 {
@@ -12,6 +13,7 @@ public:
 
 	void initMap();
 	void draw();	
+	// bool tileIsDure(int i ,int j)
 
 private:
 	sf::RenderWindow *pWindow;
